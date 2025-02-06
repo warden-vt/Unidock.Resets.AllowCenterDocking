@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Assets\LinuxIcon.jpg" />
+	</ItemGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="Assets\LinuxIcon.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="$(SolutionDir)..\..\src\NP.Ava.Visuals.csproj" />
+	</ItemGroup>
+</Project>

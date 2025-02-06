@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniDock-AllowCenterDocking-Resets", "UniDock-AllowCenterDocking-Resets\UniDock-AllowCenterDocking-Resets.csproj", "{20C001F0-5E4D-4EE8-981C-16025BCAAFC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NP.Ava.UniDock", "NP.Ava.UniDock\src\NP.Ava.UniDock.csproj", "{38ED7B85-7763-4F88-AE28-840A0E28D654}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{20C001F0-5E4D-4EE8-981C-16025BCAAFC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20C001F0-5E4D-4EE8-981C-16025BCAAFC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20C001F0-5E4D-4EE8-981C-16025BCAAFC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38ED7B85-7763-4F88-AE28-840A0E28D654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38ED7B85-7763-4F88-AE28-840A0E28D654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38ED7B85-7763-4F88-AE28-840A0E28D654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38ED7B85-7763-4F88-AE28-840A0E28D654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

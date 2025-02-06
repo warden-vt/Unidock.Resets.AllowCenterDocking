@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<PackageId>NP.IoCy</PackageId>
+		<Authors>Nick Polyak</Authors>
+		<Company>AWebPros</Company>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Authors>Nick Polyak, Ph. D.</Authors>
+		<Version>1.0.34</Version>
+		<Copyright>Nick Polyak 2023</Copyright>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>DependencyInjection attributes and interfaces</Description>
+		<PackageTags>DependencyInjection, IoC, DI</PackageTags>
+	</PropertyGroup>
+  <ItemGroup>
+      <None Remove="LICENSE" />
+      <None Remove="*.nupkg" />
+      <None Remove="*.nuspec" />
+      <None Remove="README.md" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='Debug'">
+    <ProjectReference Include="$(SolutionDir)..\..\SubModules\NP.IoC.CommonImplementations\src\NP.IoC.CommonImplementations.csproj" />
+  </ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)'=='Release'">
+		<PackageReference Include="NP.IoC.CommonImplementations" Version="1.0.10" />
+	</ItemGroup>
+</Project>

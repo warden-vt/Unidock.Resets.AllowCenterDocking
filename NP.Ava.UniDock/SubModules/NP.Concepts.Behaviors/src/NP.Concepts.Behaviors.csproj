@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<PackageId>NP.Concepts.Behaviors</PackageId>
+		<Version>1.0.23</Version>
+		<Authors>Nick Polyak, Ph. D.</Authors>
+		<Company>AWebPros</Company>
+		<Description>Useful generic non-visual behaviors</Description>
+		<Copyright>Nick Polyak 2023</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageTags>behaviors</PackageTags>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<Optimize>True</Optimize>
+		<DebugType>embedded</DebugType>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>portable</DebugType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="NP.Concepts.Behaviors.*.nupkg" />
+		<None Remove="NP.Concepts.Behaviors.nuspec" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Condition="'$(Configuration)'=='Release'" Include="NP.Utilities" Version="1.0.28" />
+		<PackageReference Include="System.Reactive" Version="6.0.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)'=='Debug'">
+		<ProjectReference Include="$(SolutionDir)..\..\SubModules\NP.Utilities\src\NP.Utilities.csproj" />
+	</ItemGroup>
+</Project>

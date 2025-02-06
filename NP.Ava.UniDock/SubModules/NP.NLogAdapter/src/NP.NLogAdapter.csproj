@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<PackageId>NP.NLogAdapter</PackageId>
+		<Authors>Nick Polyak</Authors>
+		<Company>AWebPros</Company>
+		<Title>NP.NLogAdapter</Title>
+		<Authors>Nick Polyak, Ph. D.</Authors>
+		<Version>1.0.10</Version>
+		<Copyright>Nick Polyak 2023</Copyright>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>Adapts NLOG</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageTags>NLog</PackageTags>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="nlog.config" />
+		<None Remove="NP.NLogAdapter.nuspec" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="nlog.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NLog" Version="5.1.1" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<ProjectReference Include="$(SolutionDir)..\..\SubModules\NP.Utilities\src\NP.Utilities.csproj" />
+		<ProjectReference Include="$(SolutionDir)..\..\SubModules\NP.DependencyInjection\src\NP.DependencyInjection.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)' == 'Release'">
+		<PackageReference Include="NP.Utilities" Version="1.0.22" />
+		<PackageReference Include="NP.DependencyInjection" Version="1.0.9" />
+	</ItemGroup>
+
+</Project>
